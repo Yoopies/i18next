@@ -108,7 +108,10 @@ class LanguageUtil {
     }
 
     fallbackCodes.forEach(fc => {
-      if (codes.indexOf(fc) < 0) addCode(this.formatLanguageCode(fc));
+      if (codes.indexOf(fc) < 0) addCode(
+        this.options.noFormatFallbackLanguageCode !== undefined && this.options.noFormatFallbackLanguageCode ?
+          fc : this.formatLanguageCode(fc)
+      );
     });
 
     return codes;

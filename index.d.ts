@@ -190,6 +190,12 @@ export interface InitOptions {
   fallbackLng?: false | FallbackLng;
 
   /**
+   * Skip usage of formatLanguageCode for fallbackLng
+   * @default false
+   */
+  noFormatFallbackLanguageCode?: false | boolean;
+
+  /**
    * Array of allowed languages
    * @default false
    */
